@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    background-color: cyan;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.todo-container{
+    width: 40%;
+    height: 80vh;
+    background-color: rgb(116, 131, 214);
+}
+.todo-container h1{
+    margin: 1.5rem auto;
+    width: fit-content;
+    font-size: 2.5rem;
+    padding: 10px 15px;
+}
+.input-container{
+    display: flex;
+    justify-content: space-around;
+}
+.input-container .input-task{
+    border: 1px solid rgb(199, 172, 172);
+    font-size: 1.3rem;
+    border-radius: 15px;
+    padding: 8px;
+}
+.input-container .add-task{
+    padding: 0 5px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background-color: #4a4ae0;
+}
+.input-container .add-task:hover{
+    color: white;
+    background-color: rgb(40, 40, 163);
+    transition: all .3s;
+}
+.task-container{
+    margin: 2rem 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #565294;;
+    height: 62%;
+    width: 100%;
+}
+ 
+.task-container .task-list{
+    display: inline-block;
+    width: 95%;
+    padding: 2px 15px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    color: white;
+    list-style: none;
+    margin: 10px 5px;
+    background-color: rgb(25 117 126);
+}
+.task-container .task-list:hover{
+    background-color: rgb(24 144 156);
+    transition: all .3s;
+}
+.task-container .task-list .icon{
+    cursor: pointer;
+    float: right;
+}
+
+@media  screen and (max-width: 500px) {
+    .todo-container{
+        width: 100%;
+        height: 100%;
+    }
+    .input-container{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .input-container .add-task{
+        margin-top: 15px;
+    }
+}
